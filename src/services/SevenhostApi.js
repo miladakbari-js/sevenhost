@@ -7,6 +7,7 @@ const api = axios.create({
   }
 })
 
+
 const API_KEY = "CG-WgFt3PKPbDTPSftiwUSDKzVC";
 
 const getCoinsList = () => {

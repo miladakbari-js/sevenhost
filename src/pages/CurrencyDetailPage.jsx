@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 function CurrencyDetailPage() {
   const params = useParams();
   const [detail , setDetail] = useState();
-//   console.log(params);
+  console.log(detail?.description.en);
 
   useEffect(() => {
     fetch(`https://api.coingecko.com/api/v3/coins/${params.name.toLowerCase()}`)
@@ -13,7 +13,7 @@ function CurrencyDetailPage() {
   }, []);
   return <div>
     CurrencyDetailPage
-    {/* <p>{detail.description.en}</p> */}
+  <p>{detail?.description.en}</p>
     </div>;
 }
 
