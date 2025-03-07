@@ -1,0 +1,47 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    height: 80px;
+    border-bottom: 1px solid #C8D7FF;
+    padding: 12px 96px 12px 96px;
+}
+.links{
+    display: flex;
+    max-width: 528px;
+    height: 32px;
+    gap: 100px;
+}
+.links a {
+    color: #4C5D77;
+    text-decoration: none;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    max-width: 303px;
+    gap: 10px;
+}
+.buttons button{
+    width: 154px;
+    height: 56px;
+    border-radius: 32px;
+    padding: 16px 32px ;
+    background-color: #2140D4;
+    color: #fff;
+    border: none;
+    transition:all ease-in 0.1s ;
+}
+.buttons span{
+    width: 53px;
+    height: 24px;
+    gap: 16px;
+    color: #4C5D77;
+}
+
+.buttons button:hover{
+    color: #5A89FF;
+    background-color: #65BBE5;
+}

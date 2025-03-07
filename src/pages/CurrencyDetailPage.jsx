@@ -7,8 +7,6 @@ function CurrencyDetailPage() {
   const params = useParams();
   const [detail, setDetail] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  console.log(detail?.description.en);
-  console.log(detail);
 
   useEffect(() => {
     fetch(
@@ -17,14 +15,23 @@ function CurrencyDetailPage() {
       }`
     )
       .then((res) => res.json())
-      .then((json) => setDetail(json));
-      setIsLoading(false);
+      .then((json) => {
+        setDetail(json)
+        setIsLoading(false);
+      });
   }, []);
+
+  useEffect(() => {
+    console.log(detail?.description.en);
+    console.log(detail);
+  }, [isLoading])
  
   return (
     <>
       {isLoading ? (
-        <h1>is Loading...</h1>
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "100vh" }}>
+          <RotatingLines strokeColor="#2140D4" strokeWidth="2" />
+        </div>
       ) : (
         <div className={styles.container}>
           <h2>{params.name}DetailPage</h2>
