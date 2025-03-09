@@ -1,0 +1,35 @@
+.container{
+    width: 1440px;
+    height: 580px;
+    padding: 96px 48px;
+}
+.slider-container {
+    overflow: hidden;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    width: calc(100% * 3);
+    animation: slide-horizontal 20s infinite;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 816px;
+    height:432px;
+    border-radius: 56px;
+    display: block;
+}
+
+
+@keyframes slide-horizontal {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}

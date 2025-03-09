@@ -1,47 +1,42 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import styles from "./CurrencyDetailPage.module.css";
-import { RotatingLines } from "react-loader-spinner";
+import moment from "moment-jalaali";
 
-function CurrencyDetailPage() {
-  const params = useParams();
-  const [detail, setDetail] = useState();
-  const [isLoading, setIsLoading] = useState(true);
+function CurrencyDetailPage({ modal, setModal }) {
+  const {
+    id,
+    image,
+    symbol,
+    last_updated,
+    market_data: {
+      current_price: { usd },
+    },
+  } = modal;
+  const persianDate = moment(last_updated).format("jYYYY/jMM/jDD");
 
-  useEffect(() => {
-    fetch(
-      `https://api.coingecko.com/api/v3/coins/${params.name.toLowerCase()}?x_cg_demo_api_key=${
-        import.meta.env.VITE_API_KEY
-      }`
-    )
-      .then((res) => res.json())
-      .then((json) => {
-        setDetail(json)
-        setIsLoading(false);
-      });
-  }, []);
-
-  useEffect(() => {
-    console.log(detail?.description.en);
-    console.log(detail);
-  }, [isLoading])
- 
   return (
-    <>
-      {isLoading ? (
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "100vh" }}>
-          <RotatingLines strokeColor="#2140D4" strokeWidth="2" />
+    <div className={styles.container}>
+      <div className={styles.modal}>
+        <div className={styles.head}>
+          <p><b style={{color:"#08C056"}}>7</b>currencies<b style={{color:"#08C056"}}>.</b></p>
+          <span className={styles.cross} onClick={() => setModal(null)}>
+            X
+          </span>
         </div>
-      ) : (
-        <div className={styles.container}>
-          <h2>{params.name}DetailPage</h2>
-          <div className={styles.detail}>
-            <img src={detail?.image.large} />
-            <p>{detail?.description.en}</p>
+        <div className={styles.info}>
+          <div>
+            <img src={image.large} alt="image" />
+            <span>{id}</span>
+            <p className={styles.symbol}>{symbol.toUpperCase()}</p>
           </div>
+          <span>{persianDate} Updated</span>
         </div>
-      )}
-    </>
+        <div className={styles.usd}>
+        <p>{usd}</p>
+        <span>USD</span>
+        </div>
+        
+      </div>
+    </div>
   );
 }
 

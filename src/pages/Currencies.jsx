@@ -4,12 +4,15 @@ import { getCoinsList } from "../services/SevenhostApi";
 import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "./Currencies.module.css";
 
+
+
 function Currencies() {
   const [coins, setCoins] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1); //page counter
   const [hasMore, setHasMore] = useState(true); //infinit scroll more
   const [scrollCount, setScrollCount] = useState(0); // scroll counter
+  
 
   //fech data for coins
   const fetchCoins = async (currentPage) => {
@@ -57,6 +60,7 @@ function Currencies() {
         </div>
       </div>
       <div className={styles.table}>
+        
         <InfiniteScroll
           dataLength={coins.length}
           next={loadMoreCoins}
@@ -72,6 +76,7 @@ function Currencies() {
           </button>
         )}
       </div>
+       
     </div>
   );
 }

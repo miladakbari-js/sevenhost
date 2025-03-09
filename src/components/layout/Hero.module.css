@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  height: 1114px;
+  padding: 250px 48px;
+  gap: 96px;
+  top: 5511px;
+  left: 716px;
+ 
+}
+.text {
+  width: fit-content;
+  height: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text p {
+  width: 914px;
+
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 150%;
+  letter-spacing: -1%;
+  color: #2140d4;
+  font-variant-numeric: lining-nums;
+}
+.pic img {
+ 
+  width: 940px;
+  height: 700px;
+}
+.text span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #7e8186;
+}

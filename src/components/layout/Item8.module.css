@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  width: 1440px;
+  height: 624px;
+  padding: 137px 48px;
+  gap: 72px;
+  align-items: center;
+}
+.pic img {
+  width: 528px;
+  height: 528px;
+  border-radius: 256px;
+  filter: drop-shadow(-31px 3px -37px #fb519184);
+}
+.text {
+  display: flex;
+  max-width: 485px;
+  height: 206px;
+  gap: 48px;
+  flex-direction: column;
+}
+.text p {
+  width: 100%;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 100%;
+  color: #fb5191;
+}
+.text span {
+  width: 494px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #7e8186;
+}
+.text a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #2140d4;
+}
