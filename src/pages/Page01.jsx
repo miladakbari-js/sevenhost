@@ -3,6 +3,7 @@ import styles from "./Page01.module.css";
 
 function Page01() {
   const { darkMode } = useDarkMode();
+
   return (
     <div className={styles.container}>
       <div className={!darkMode ? styles.left : styles.dark}>

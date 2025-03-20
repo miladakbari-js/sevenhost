@@ -5,7 +5,8 @@ import Hero from "../components/layout/Hero";
 import Item7 from "../components/layout/Item7";
 import Item8 from "../components/layout/Item8";
 import Item9 from "../components/layout/Item9";
-import Page01 from "./page01";
+import Page01 from "./Page01";
+
 
 function HomePage() {
 
