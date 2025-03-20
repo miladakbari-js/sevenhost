@@ -3,17 +3,33 @@
   line-height: 1.5;
 }
 
-
-body {
+body.light {
   margin: auto;
- max-width: 1200px;
- min-height: 100vh;
- padding: 10px;
- background-color:  #FAFBFF;
-
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #fafbff;
 }
-*{
+body.dark {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #313131;
+}
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 375px) {
+  body{
+   max-width: 375px;
+   height: 6201.4px;
+   box-sizing: border-box;
+  }
 }

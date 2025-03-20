@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  width: 1440px;
+  max-width: 1440px;
   height: 624px;
   padding: 137px 48px;
   gap: 72px;
@@ -14,9 +14,9 @@
 }
 .text {
   display: flex;
-  max-width: 485px;
+  width: 450px;
   height: 206px;
-  gap: 48px;
+  gap: 32px;
   flex-direction: column;
 }
 .text p {
@@ -24,7 +24,9 @@
   font-size: 36px;
   font-weight: 900;
   line-height: 100%;
+  letter-spacing: -1;
   color: #fb5191;
+  text-align: justify;
 }
 .text span {
   width: 494px;
@@ -32,6 +34,7 @@
   font-weight: 400;
   line-height: 30px;
   color: #7e8186;
+  text-align: justify;
 }
 .text a {
   font-weight: 700;
@@ -39,4 +42,75 @@
   line-height: 24px;
   text-align: right;
   color: #2140d4;
+}
+.dark {
+  display: flex;
+  width: 450px;
+  height: 206px;
+  gap: 32px;
+  flex-direction: column;
+}
+.dark p {
+  width: 100%;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 100%;
+  letter-spacing: -1;
+  color: #fb5191;
+  text-align: justify;
+}
+.dark span {
+  width: 494px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #C8CED6;
+  text-align: justify;
+}
+
+@media (max-width:375px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    height: 705px;
+    padding: 32px 48px;
+    gap: 48px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .text{
+    
+    display: flex;
+    width: 311px;
+    height: 250px;
+    gap: 40px;
+  }
+  .text p {
+    width: 311px;
+    height: 56px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: -1%;
+    color:#fb5191;
+    text-align: left;
+  }
+  .text span {
+    width: 311px;
+    height: 120px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1%;
+    line-height: 30px;
+    color: #7e8186;
+    text-align: justify;
+  }
+  .pic img {
+    width: 311px;
+    height: 311px;
+    border-radius: 256px;
+    filter: drop-shadow(-20px 24px 33px #fb5191);
+  }
+
 }

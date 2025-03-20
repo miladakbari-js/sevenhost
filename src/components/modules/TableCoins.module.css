@@ -47,14 +47,32 @@
     color: #d33636;
 }
 
-@media (max-width: 600px){
+@media (max-width: 375px){
+  .container{
+    min-width:fit-content;
+    height:fit-content;
+  
+  }
     .table {
         display: block;
+        align-items: center;
         overflow-x: scroll;
         overflow-y: scroll;
+        margin-left: 50px ;
     }
     .table td,
     .table th{
-        padding: 0 10px;
+      max-width: fit-content;
+      height: 40px;
+      padding: 2px;
+      font-size: 10px;
     }
+    .symbol img{
+      width: 24px;
+      height: 24px;
+    }
+    .symbol span{
+      font-size: 12px;
+    }
+  
 }

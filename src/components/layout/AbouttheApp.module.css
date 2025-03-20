@@ -1,8 +1,10 @@
 .container {
   display: flex;
+  max-width: 1440px;
+  height: 292px;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 .icons {
   width: 876px;
@@ -22,7 +24,7 @@
   font-weight: 900;
   color: #4f4f4f;
 }
-.up span {
+.up div span {
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
@@ -69,4 +71,59 @@
   font-size: 16px;
   line-height: 24px;
   color: #00006d;
+}
+
+/* ----------------- */
+
+.dark {
+  margin-bottom: 35px;
+}
+.dark p {
+  font-size: 36px;
+  font-weight: 900;
+  color: #c1c1c1;
+}
+.dark div span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #c8ced6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -------------- */
+
+.darkbox {
+  display: flex;
+  width: 240px;
+  height: 64px;
+  gap: 24px;
+}
+.darkbox span {
+  font-size: 16px;
+  line-height: 24px;
+  color: #cdcdff;
+}
+
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    max-width:375px;
+    height: 448px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    padding: 43px 24px;
+    gap: 24px;
+  }
+  .icons {
+    width: 239px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+  }
 }

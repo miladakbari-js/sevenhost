@@ -62,3 +62,60 @@
   color: #5A89FF;
   background-color: #65BBE5;
 }
+@media(max-width : 375px){
+  .container{
+   max-width:375px;
+   height:fit-content;
+  }
+  .head{
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    min-height: 532.49px;
+    padding: 0px 24px;
+    gap: 48px;
+  }
+  .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 311px;
+    height: 210px;
+    gap: 24px;
+  }
+  .text p{
+    width: 311px;
+    height: 126px;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -1%;
+  }
+  .text span{
+    width: 311px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -1%;
+    text-align: center;
+  }
+  .image{
+    width: 311px;
+    height: 226.49px;
+    display: flex;
+    justify-content: center;
+  }
+  .image img{
+    width: 250px;
+    height: 250px;
+  }
+  .table{
+    min-width: 375px;
+    height: fit-content;
+    padding-bottom: 24px;
+    gap: 48px;
+    border-radius: 0;
+    padding: 0;
+  }
+}

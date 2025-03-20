@@ -1,7 +1,8 @@
 .container{
-    width: 1440px;
+    max-width: 1440px;
     height: 580px;
     padding: 96px 48px;
+    
 }
 .slider-container {
     overflow: hidden;

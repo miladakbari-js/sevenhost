@@ -1,19 +1,24 @@
 .container{
     display: flex;
-    width: fit-content;
+    max-width: 1440px;
+    height: 476px;
     align-items: center;
+    padding: 96px 48px;
+    gap: 72px;
+    margin: auto;
 }
 .left{
     display: flex;
     flex-direction: column;
-    width: 570px;
-    height: 260px;
-    gap: 32px;
-    
+    width: 576px;
+    height: 380px;
+    gap: 64px;
 }
+
 .left p{
-    font-size: 48px;
+    font-size: 45px;
     font-weight: 800;
+    text-align: left;
     color: #2140D4;
 }
 .left span {
@@ -59,8 +64,81 @@
     border: 1px solid #65BBE5;
     color: #5A89FF;
 }
+
 .container img{
     width: 450px;
-    height: 335px;
+    height: 339.75px;
     margin-top: 25px;
+}
+
+.dark{
+    display: flex;
+    flex-direction: column;
+    width: 576px;
+    height: 380px;
+    gap: 64px;
+}
+
+.dark p{
+    font-size: 45px;
+    font-weight: 800;
+    text-align: left;
+    color: #4F81FF;
+}
+.dark span {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color:#C8CED6;
+}
+@media (max-width:375px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 375px;
+        height: 784.81px;
+        padding: 32px 24px;
+        gap: 48px;
+        
+    }
+    .container button{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        width: 311px;
+        height: 168px;
+    }
+    .left p{
+        text-align: center;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: -1%;
+    }
+    .left span{
+        height: 90px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -1%;
+        text-align: center;
+    }
+    .buttons{
+        width: 311px;
+        height: 124px;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+      
+       gap: 12px;
+    }
+    .demo{
+        margin-left: 0;
+    }
+    .image{
+        width: 311px;
+        height: 234.81px;
+        margin-top: 250px;
+    }
 }

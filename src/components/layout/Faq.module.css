@@ -1,10 +1,11 @@
 .container{
-    width: 1440px;
+    max-width: 1440px;
     height: 944px;
-
+   display: inline;
 }
 .list{
     display: flex;
+    margin: auto;
     flex-direction: column;
     max-width: 1100px;
     height: fit-content;
@@ -35,7 +36,7 @@
     color: #858383;
 }
 .container button{
-    width: 24px;
+    min-width: 24px;
     height: 24px;
     border-radius: 50%;
     border: 1.5px solid #212121;
@@ -56,13 +57,83 @@
     text-align: center;
     color: #858383;
 }
-
-
-
-
 .show{
     display: inline-block;
 }
 .hidden{
     display: none;
+}
+.darkmode {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: 1100px;
+    height: fit-content;
+    border-radius: 56px;
+    padding: 56px;
+    gap: 22px;
+    background-color: #434343;
+}
+.darkmode h4{
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 100%;
+    color: #DDDDDD;
+    text-align: center;
+}
+.darkmode p{
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #C8CED6;
+}
+.darkmode span{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #A5A5A5;
+}
+
+@media (max-width : 375px){
+    .container{
+        width: 375px;
+        height: 1164px;
+        padding: 48px 0 48px;
+       display: inline;
+       gap: 10px;
+       
+    }
+    .list{
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        min-width: 375px;
+        height: fit-content;
+        border-radius: 56px;
+        padding: 14px 12px;
+        gap: 22px;
+        background-color: #EDEDED;
+     border-radius: 0;
+     align-items: center;
+    }
+    .parag{
+        min-width: 347px;
+        height: 138px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-align: center;
+        align-items: center;
+    }
+    .container button{
+        display: inline-block;
+        min-width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1.5px solid #212121;
+        font-size: 24px;
+        line-height: 0.5;
+        cursor: pointer;
+    }
 }

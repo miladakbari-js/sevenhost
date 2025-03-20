@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import styles from "./Item8.module.css";
+import { useDarkMode } from "../../services/darkmode";
 
 function Item8() {
+  const {darkMode} = useDarkMode();
   return (
     <div className={styles.container}>
       <div className={styles.pic}>
-        <img src="./item8.png" alt="pic" />
+        <img src= {!darkMode ? "./item8.png" : "./dark23.svg"} alt="pic" />
       </div>
 
-      <div className={styles.text}>
+      <div className={!darkMode ? styles.text : styles.dark}>
         <p>Used by teams from all over the globe</p>
         <span>
           Our app has been trusted by many different teams from around the world

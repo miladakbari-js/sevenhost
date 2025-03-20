@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    width: 1440px;
-    height: 624px;
+    max-width: 1440px;
+    max-height: 624px;
     padding: 137px 48px;
     gap: 72px;
     align-items: center;
@@ -14,23 +14,28 @@
   }
   .text {
     display: flex;
-    max-width: 100%;
-    height: 240px;
+    max-width: 494px;
+    height: 278px;
     gap: 48px;
     flex-direction: column;
   }
   .text p {
-    width: 100%;
+    width: 485px;
+    height: 84px;
     font-size: 36px;
     font-weight: 900;
     line-height: 100%;
+    letter-spacing: -1%;
+    text-align: left;
     color: #FF9900;
   }
   .text span {
-    width: 494px;
+    width: 480px;
+    height: 90px;
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
+    letter-spacing: -1%;
     color: #7e8186;
   }
   .text a {
@@ -40,4 +45,104 @@
     text-align: right;
     color: #2140d4;
   }
+
+  .dark {
+    display: flex;
+    max-width: 494px;
+    height: 278px;
+    gap: 48px;
+    flex-direction: column;
+  }
+  .dark p {
+    width: 485px;
+    height: 84px;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: -1%;
+    text-align: left;
+    color: #FF9900;
+  }
+  .dark span {
+    width: 480px;
+    height: 90px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -1%;
+    color: #C8CED6;
+  }
+  .dark a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color:#4F81FF;
+  }
   
+  @media (max-width:375px){
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-width: 375px;
+      height: 705px;
+      padding: 32px 48px;
+      gap: 48px;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .text{
+      position: absolute;
+      display: flex;
+      width: 311px;
+      height: 250px;
+      gap: 40px;
+      z-index: 2;
+      bottom: 0px;
+    }
+    .text p {
+      position: absolute;
+      z-index: 2;
+      width: 311px;
+      height: 56px;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 100%;
+      letter-spacing: -1%;
+      color: #FF9900;
+      text-align: left;
+    }
+    .text span {
+      position: absolute;
+      width: 311px;
+      height: 120px;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: -1%;
+      line-height: 30px;
+      color: #7e8186;
+      bottom: 50px;
+    }
+    .pic img {
+     
+      width: 311px;
+      height: 311px;
+      border-radius: 256px;
+      filter: drop-shadow(-20px 24px 33px #FF990084);
+    }
+    .pic{
+      position: absolute;
+      z-index: 1;
+    }
+    .text a {
+      position: absolute;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      right: 2px;
+      color: #2140d4;
+      bottom:1px ;
+    }
+  
+  }

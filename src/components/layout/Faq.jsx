@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Faq.module.css";
+import { useDarkMode } from "../../services/darkmode";
 
 function Faq() {
   const [item1, setItem1] = useState(false);
@@ -11,14 +12,13 @@ function Faq() {
   const [item7, setItem7] = useState(false);
   const [item8, setItem8] = useState(false);
 
- 
-    
+  const {darkMode} = useDarkMode();
 
   return (
     <div className={styles.container}>
-      <div className={styles.list}>
+      <div className={!darkMode ? styles.list : styles.darkmode}>
         <h4>FAQ</h4>
-        <p>
+        <p className={styles.parag}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -33,7 +33,7 @@ function Faq() {
         </div>
         <div className={styles.message}>
           <span className={item1 ? styles.show : styles.hidden}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in

@@ -3,6 +3,7 @@ import TableCoins from "../components/modules/TableCoins";
 import { getCoinsList } from "../services/SevenhostApi";
 import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "./Currencies.module.css";
+import Frame15 from "../components/layout/Frame15";
 
 
 
@@ -76,7 +77,7 @@ function Currencies() {
           </button>
         )}
       </div>
-       
+       <Frame15/>
     </div>
   );
 }

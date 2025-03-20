@@ -1,18 +1,20 @@
+
+import { useDarkMode } from "../services/darkmode";
 import styles from "./Page01.module.css"
 
 function Page01() {
+  const {darkMode} = useDarkMode();
   return (
     <div className={styles.container}>
-      <div className={styles.left}>
+      <div className={!darkMode ? styles.left : styles.dark}>
         <p>Manage your daily tasks better without all the stress.</p>
         <span>Change the way you manage your tasks with our revolutionary project management technology.</span>
-      <div>
-
+      <div className={styles.buttons}>
       <button className={styles.started}>Get Started</button>
       <button className={styles.demo}>Schedule a Demo</button>
       </div>
       </div>
-      <div>
+      <div className={styles.image}>
         <img  src="./public/cart.png" alt="cart.png" />
       </div>
     </div>
